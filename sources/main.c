@@ -28,18 +28,18 @@ int		usage(int ac, char **av, t_fractol *f)
 
 	if (ac != 2)
 	{
-		ft_putstr("Usage: ./fractol [parameter]");
+		ft_putstr("Usage: ./fractol [number]");
 		return (0);
 	}
 	a = ft_atoi(av[1]);
-	if ((int)ft_strlen(av[1]) == 1 && (a >= 1 && a <= 8))
+	if ((int)ft_strlen(av[1]) == 1 && (a >= 1 && a <= 6))
 	{
 		f->type = a;
 		return (1);
 	}
 	ft_putstr("Usage:\t./fractol 1 (for Mandelbrot set)");
 	ft_putstr("\n\t./fractol 2 (for Julia set)");
-	ft_putstr("\n\t./fractol 3..8 (for other sets)");
+	ft_putstr("\n\t./fractol 3..6 (for other sets)");
 	return (0);
 }
 
